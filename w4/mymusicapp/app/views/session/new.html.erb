@@ -1,0 +1,16 @@
+<h>Login</h>
+<form action="<%session_url%>" method="post">
+	<label for="email_label">Email:</label>
+	<input type="text"
+				 name="user[email]"
+				 id="email_label"
+				 value="<%@user.email%>">
+	<br>
+	<label for="password_label">Password:</label>
+	<input type="password"
+				 name="user[password]"
+				 id="password_label"
+				 value="<%@user.password%>">
+	<br>
+	<input type="submit">
+</form>
