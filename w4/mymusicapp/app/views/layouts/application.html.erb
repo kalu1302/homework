@@ -8,6 +8,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<h>
+  <% unless current_user.nil? %>
+    <%= button_to "logout", session_url, method: :destroy %>
+  <% else %>
+    <%= link_to "sign in", new_session_url %>
+    <%= link_to "sign up", new_user_url %>
+  <% end %>
+</h>
+<br>
+<br>
+
   <body>
     <%= yield %>
   </body>
